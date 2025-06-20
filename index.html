@@ -211,12 +211,12 @@
 <p>5.支付并把商品从购物车中移除</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">delGood</span><span class="params">(String good)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;DELETE FROM carts WHERE c_id=?&quot;</span>;</span><br><span class="line">    <span class="keyword">try</span>(<span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> CF.getConn();</span><br><span class="line">        <span class="type">PreparedStatement</span> <span class="variable">ps</span> <span class="operator">=</span> conn.prepareStatement(sql))&#123;</span><br><span class="line">        ps.setString(<span class="number">1</span>, getC_id(getG_id(good)));</span><br><span class="line">        <span class="keyword">return</span> ps.executeUpdate();</span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="运行效果展示"><a href="#运行效果展示" class="headerlink" title="运行效果展示"></a>运行效果展示</h2><p>1.登陆页面<br><img src="https://ze-2gij738154dcf45f-1338084978.tcloudbaseapp.com/img/1.png" alt="1"><br>2.商品浏览页面<br><img src="https://ze-2gij738154dcf45f-1338084978.tcloudbaseapp.com/img/2.png" alt="2"><br>3.操作页面<br><img src="https://ze-2gij738154dcf45f-1338084978.tcloudbaseapp.com/img/3.png" alt="3"><br>4.购物车页面<br><img src="https://ze-2gij738154dcf45f-1338084978.tcloudbaseapp.com/img/4.png" alt="4"><br>5.支付成功页面<br><img src="https://ze-2gij738154dcf45f-1338084978.tcloudbaseapp.com/img/5.png" alt="5"></p>
-<h2 id="项目-github-地址"><a href="#项目-github-地址" class="headerlink" title="项目 github 地址"></a>项目 github 地址</h2><p>购物车系统：<a target="_blank" rel="noopener" href="https://github.com/Gillott/CartSystem">https://github.com/Gillott/CartSystem</a></p>
-        
-          <p class="article-more-link">
-            <a href="/2025/06/19/%E7%AE%80%E6%98%93%E8%B4%AD%E7%89%A9%E8%BD%A6%E7%B3%BB%E7%BB%9F/#more">Read More</a>
-          </p>
-        
+<h2 id="项目-github-地址"><a href="#项目-github-地址" class="headerlink" title="项目 github 地址"></a>项目 github 地址</h2><p>购物车系统：<a target="_blank" rel="noopener" href="https://github.com/Gillott/CartSystem">https://github.com/Gillott/CartSystem</a><br>制作人：Gillott</p>
+<h2 id="收获与不足"><a href="#收获与不足" class="headerlink" title="收获与不足"></a>收获与不足</h2><ul>
+<li><h4 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h4>  巩固了 java 相关编程知识以及 mysql 数据库的设计方法，熟悉了设计 java 项目的大致流程以及清楚了如何对一个本地项目进行打包处理。</li>
+<li><h4 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h4>  系统 UI 设计简单，商品还可添加图片信息，购物车结算时应当整合相同商品显示数量，没能实现显示所需金额的功能。</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
